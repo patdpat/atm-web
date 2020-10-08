@@ -12,6 +12,6 @@ public class HomeController {
 
         model.addAttribute("greeting", "Welcome to Sidtipat ATM");
 
-        return "home"; 
+        return "home";
     }
 }
