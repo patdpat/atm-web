@@ -10,18 +10,18 @@ import java.util.List;
 @Service
 public class BankAccountService {
 
-    private List<BankAccount> bankAccountsList;
+    private List<BankAccount> bankAccounts;
 
     @PostConstruct
     public void postConstruct() {
-        this.bankAccountsList = new ArrayList<>();
+        this.bankAccounts = new ArrayList<>();
     }
 
-    public List<BankAccount> getBankAccounts() {
-        return new ArrayList<>(this.bankAccountsList);
+    public void addBankAccount(BankAccount bankAccount){
+        this.bankAccounts.add(bankAccount);
     }
 
-    public void createBankAccount(BankAccount bankAccount) {
-        bankAccountsList.add(bankAccount);
+    public List<BankAccount> getBankAccounts(){
+        return this.bankAccounts;
     }
 }

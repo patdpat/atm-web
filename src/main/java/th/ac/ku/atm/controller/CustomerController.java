@@ -12,6 +12,7 @@ import th.ac.ku.atm.service.CustomerService;
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
+
     private CustomerService customerService;
 
     public CustomerController(CustomerService customerService) {
@@ -25,7 +26,7 @@ public class CustomerController {
     }
 
     @PostMapping
-    public String registerCustomer(@ModelAttribute Customer customer, Model model) {
+    public String regisCustomer(@ModelAttribute Customer customer, Model model) {
         customerService.createCustomer(customer);
         model.addAttribute("allCustomers", customerService.getCustomers());
         return "redirect:customer";

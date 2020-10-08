@@ -6,40 +6,32 @@ public class BankAccount {
     private String type;
     private double balance;
 
-    public BankAccount(int id, int customerId, String type, double balance) {
+    public void BankAccount(int id, int customerId, String type, double balance){
         this.id = id;
         this.customerId = customerId;
         this.type = type;
         this.balance = balance;
     }
 
-    public int getId() {
-        return id;
-    }
+    public int getId() { return this.id;}
 
     public void setId(int id) {
         this.id = id;
     }
 
-    public int getCustomerId() {
-        return customerId;
-    }
+    public int getCustomerId() { return this.customerId;}
 
     public void setCustomerId(int customerId) {
         this.customerId = customerId;
     }
 
-    public String getType() {
-        return type;
-    }
+    public String getType() { return this.type;}
 
     public void setType(String type) {
         this.type = type;
     }
 
-    public double getBalance() {
-        return balance;
-    }
+    public double getBalance() { return this.balance;}
 
     public void setBalance(double balance) {
         this.balance = balance;
@@ -49,9 +41,8 @@ public class BankAccount {
     public String toString() {
         return "BankAccount{" +
                 "id=" + id +
-                ", customerId=" + customerId +
-                ", type='" + type + '\'' +
-                ", balance=" + balance +
-                '}';
+                ", CustomerId=" + customerId +
+                ", Type=" + type +
+                ", Balance=" + balance;
     }
 }

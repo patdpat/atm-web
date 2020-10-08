@@ -25,24 +25,25 @@
             <input type="submit" class="btn btn-primary">
         </div>
     </form>
-
     <hr>
+
     <h1>All Customers</h1>
     <table class="table table-bordered">
         <thead class="thead-light">
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Pin</th>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Pin</th>
+            <th>Full</th>
+        </tr>
         </thead>
-
         <tbody>
-            <tr th:each="customer : ${allCustomers}">
-                <td th:text="${customer.id}"></td>
-                <td th:text="${customer.name}"></td>
-                <td th:text="${customer.pin}"></td>
-            </tr>
+        <tr th:each="customer: ${allCustomers}">
+            <td th:text="${customer.id}"></td>
+            <td th:text="${customer.name}"></td>
+            <td th:text="${customer.pin}"></td>
+            <td th:text="${customer}"></td>
+        </tr>
         </tbody>
     </table>
 </div>
