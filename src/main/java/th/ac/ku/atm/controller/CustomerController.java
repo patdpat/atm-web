@@ -21,6 +21,7 @@ public class CustomerController {
 
     @GetMapping
     public String getCustomerPage(Model model) {
+
         model.addAttribute("allCustomers", customerService.getCustomers());
         return "customer";
     }
