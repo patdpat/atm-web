@@ -21,7 +21,7 @@ public class LoginController {
 
     @GetMapping
     public String getLoginPage() {
-        return "login"; 
+        return "login";   // return login.html
     }
     @PostMapping
     public String login(@ModelAttribute Customer customer, Model model) {
